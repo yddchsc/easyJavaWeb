@@ -75,9 +75,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="left w3l">
 			<h3>快速查询</h3>
 			<div class="register agileits">
-				<%= request.getAttribute("ANSWER") %>
-				<form action="<%=request.getContextPath()%>/searchServlet" method="post">	
-					<input type="submit" name="submit" value="查看下一天">
+				<p style="margin: 0 0 20px 0"><%= request.getAttribute("ANSWER") %></p>
+				<form action="<%=request.getContextPath()%>/searchServlet" method="post">
+					<input type="text" class="name" name="kind" placeholder="请输入您的病种" required="">
+					（1.急诊 2.鼻窦炎 3.扁桃体炎 4.中耳炎）	
+					<input type="submit" name="submit" value="提交">
 				</form>
 			</div>
 			<h3>发送邮件</h3>
